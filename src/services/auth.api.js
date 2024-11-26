@@ -17,9 +17,19 @@ const login = (username, password) => {
     });
 };
 
-const logout = () => {
-    return axios.post(`${API_URL}/logout`);
+
+const logout = (token) => {
+    return axios.post(
+        `${API_URL}/logout`,
+        {},
+        {
+            headers: {
+                Authorization: `Bearer ${token}`,
+            }
+        }
+    );
 };
+
 
 const authApi = {
     register,

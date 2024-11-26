@@ -27,7 +27,10 @@ const Home = () => {
 
     return (
         <div className="container mx-auto p-4">
-            <h1 className="text-3xl font-bold mb-4">API Pokemon</h1>
+            <div className="flex justify-between items-center mb-4">
+                <h1 className="text-3xl font-bold">API Pokemon</h1>
+                <a href="/logout" className="text-blue-500 hover:underline">Logout</a>
+            </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
                 {pokemonList.map((pokemon, index) => (
                     <Card
